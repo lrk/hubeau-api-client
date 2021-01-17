@@ -1,4 +1,4 @@
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 API_DEFAULT_VERSION = 'v1'
 API_BASE_URL = 'https://hubeau.eaufrance.fr/api/' + API_DEFAULT_VERSION
