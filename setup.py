@@ -1,12 +1,19 @@
 # https://github.com/pypa/sampleproject/blob/master/setup.py
-import pathlib
+import codecs
 import os.path
+import pathlib
 
 from setuptools import find_packages, setup
 
 here = pathlib.Path(__file__).parent.resolve()
 
 long_description = (here / 'README.md').read_text(encoding='utf-8')
+
+
+def read(rel_path):
+    here = os.path.abspath(os.path.dirname(__file__))
+    with codecs.open(os.path.join(here, rel_path), 'r') as fp:
+        return fp.read()
 
 
 def get_version(rel_path):
