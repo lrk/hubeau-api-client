@@ -2,7 +2,7 @@
 
 [WIP] Hubeau API Client for python
 
-[[https://img.shields.io/pypi/l/hubeau-rest-cli]]
+[[https://img.shields.io/pypi/l/hubeau-api-client]]
 
 A simple python client for [Hub'Eau APIs](https://hubeau.eaufrance.fr).
 
