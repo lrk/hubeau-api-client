@@ -2,7 +2,10 @@
 
 [WIP] Hubeau API Client for python
 
-[[https://img.shields.io/pypi/l/hubeau-api-client]]
+![PyPI](https://img.shields.io/pypi/v/hubeau-api-client)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hubeau-api-client)
+![PyPI - License](https://img.shields.io/pypi/l/hubeau-api-client)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/hubeau-api-client)
 
 A simple python client for [Hub'Eau APIs](https://hubeau.eaufrance.fr).
 
