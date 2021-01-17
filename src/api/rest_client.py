@@ -28,11 +28,13 @@ class HubeauRestApi(object):
 
     def get_endpoint_url(self, endpoint):
         """Return endpoint URL."""
+        logging.debug(f"endpoint URL for {endpoint}")
         return '/'.join([self.api_base_url, endpoint])
 
     def request(self, method='GET', path='/', params=None, headers=None):
         """Execute request."""
         url = self.get_endpoint_url(endpoint=path)
+        logging.debug(f"Sending GET Request to {url} with params: {params}")
         response = requests.request(
             method=method, url=url, params=params, headers=self.merge_headers(headers))
 

@@ -1,4 +1,11 @@
+from enum import Enum
+
 from .constants import API_BASE_URL
+
+
+class GrandeurHydro(Enum):
+    Q = 'Q'
+    H = 'H'
 
 
 def _endpoints_url(endpoint_path, base_url=API_BASE_URL):
@@ -129,7 +136,7 @@ def _params_validation(
     if date_ouverture_station:
         result['date_ouverture_station'] = date_ouverture_station
 
-    if en_service:
+    if (en_service == True) or (en_service == False):
         result['en_service'] = en_service
 
     if libelle_station:

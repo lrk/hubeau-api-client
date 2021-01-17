@@ -1,7 +1,7 @@
 import json
 import logging
 
-from .commons import _params_validation
+from .commons import GrandeurHydro, _params_validation
 from .constants import API_ENDPOINT_HYDRO_OBSERVATION_TR, API_ENDPOINT_HYDRO_SITES, API_ENDPOINT_HYDRO_STATIONS
 from .rest_client import HubeauRestApi
 
@@ -11,7 +11,7 @@ log = logging.getLogger(__name__)
 class HydrometryApi(HubeauRestApi):
 
     def get_observations_tr(self, bbox=None, distance=None, code_entite=None, cursor=None,
-                            date_debut_obs=None, date_fin_obs=None, fields=None, grandeur_hydro=None,
+                            date_debut_obs=None, date_fin_obs=None, fields=None, grandeur_hydro=GrandeurHydro.H.value,
                             latitude=None, longitude=None, size=None, sort=None, timestep=None
                             ):
 
@@ -65,7 +65,7 @@ class HydrometryApi(HubeauRestApi):
     def get_stations(self, bbox=None, code_commune_station=None, code_cours_eau=None, code_departement=None,
                      code_region=None, code_sandre_reseau_station=None, code_site=None, code_station=None,
                      date_fermeture_station=None, date_ouverture_station=None, distance=None,
-                     en_service=None, fields=None, format=None, libelle_cours_eau=None, libelle_site=None,
+                     en_service=True, fields=None, format=None, libelle_cours_eau=None, libelle_site=None,
                      libelle_station=None, latitude=None, longitude=None, page=None, size=None
                      ):
 
