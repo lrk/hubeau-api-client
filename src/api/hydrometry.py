@@ -1,8 +1,8 @@
 import json
 import logging
 
+from . import API_ENDPOINT_HYDRO_OBSERVATION_TR, API_ENDPOINT_HYDRO_SITES, API_ENDPOINT_HYDRO_STATIONS
 from .commons import GrandeurHydro, _params_validation
-from .constants import API_ENDPOINT_HYDRO_OBSERVATION_TR, API_ENDPOINT_HYDRO_SITES, API_ENDPOINT_HYDRO_STATIONS
 from .rest_client import HubeauRestApi
 
 log = logging.getLogger(__name__)

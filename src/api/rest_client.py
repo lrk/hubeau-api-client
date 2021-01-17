@@ -2,7 +2,7 @@ import logging
 
 import requests
 
-from .constants import API_BASE_URL, API_DEFAULT_VERSION
+from . import API_BASE_URL, API_DEFAULT_VERSION
 
 
 log = logging.getLogger(__name__)

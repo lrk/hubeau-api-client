@@ -1,6 +1,6 @@
 from enum import Enum
 
-from .constants import API_BASE_URL
+from . import API_BASE_URL
 
 
 class GrandeurHydro(Enum):
@@ -136,7 +136,7 @@ def _params_validation(
     if date_ouverture_station:
         result['date_ouverture_station'] = date_ouverture_station
 
-    if (en_service == True) or (en_service == False):
+    if (en_service is True) or (en_service is False):
         result['en_service'] = en_service
 
     if libelle_station:
